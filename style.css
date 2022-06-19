@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,14 +12,50 @@
 .main-container {
   font-size: 1.6rem;
   width: 100vw;
+
   background-color: hsl(270, 20%, 96%);
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
   /* flex-direction: column; */
   /* gap: 10em; */
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 20px;
+  position: relative;
+  /* font-family: "Shadows Into Light"; */
+  font-family: "Rubik", sans-serif;
+}
+.main-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 70vh;
+  /* background-color: hsl(276, 55%, 52%); */
+  background-image: linear-gradient(
+    to bottom,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 71%)
+  );
+
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  border-bottom-right-radius: 100%;
+}
+.main-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 60vh;
+  background-color: hsl(206, 6%, 93%);
+
+  bottom: 0%;
+  right: 0%;
+  z-index: 1;
+  border-top-left-radius: 100%;
 }
 .img {
   max-width: 40px;
@@ -33,6 +71,8 @@
   border-top-right-radius: 2em; */
   border-radius: 2em;
   position: relative;
+  position: relative;
+  z-index: 23;
 }
 /* .main-chat-box-comp > :first-child {
   border: 1px solid;
@@ -40,6 +80,9 @@
 div.border-radius {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+
   padding: 2em 0.5em 0.5em;
 }
 
@@ -54,18 +97,19 @@ div.border-radius::after {
   margin-inline: auto;
   width: 50%;
   height: 2rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background-color: white;
   border-bottom-left-radius: 2em;
   border-bottom-right-radius: 2em;
 }
 
 .main-chat-box-comp {
-  padding: 0.5em;
+  padding: 0.7em;
+  /* margin-bottom: 0.5em; */
 }
 
 .arrow {
-  font-size: 3rem;
+  font-size: 2rem;
 
   color: white;
 }
@@ -81,8 +125,11 @@ div.border-radius::after {
   flex-basis: 35rem;
   flex-grow: 0;
   background: white;
-  padding: 0.7em;
+  padding: 0.5em;
   border-radius: 2em;
+  box-shadow: 0px 0px 15px rgb(187, 185, 185);
+  margin-bottom: 3em;
+  z-index: 123;
 }
 .flex-one {
   display: flex;
@@ -95,12 +142,12 @@ div.border-radius::after {
 }
 
 .flex-child > :first-child {
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 .flex-child > :last-child {
   font-size: 1rem;
-  color: hsl(206, 6%, 79%);
-  opacity: 60%;
+  color: hsl(276, 100%, 81%);
+  /* opacity: 60%; */
 }
 
 .gradient-color {
@@ -109,4 +156,191 @@ div.border-radius::after {
     hsl(264, 100%, 61%),
     hsl(293, 100%, 63%)
   );
+
+  color: hsl(276, 55%, 92%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gradient-color-text {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+
+  color: hsl(276, 55%, 92%);
+  max-width: 20rem;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 1em;
+  box-shadow: 0px 0px 2px 0px hsl(271, 31%, 80%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+.gradient-color-text > :last-child {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.pink-color {
+  background-color: hsl(271, 31%, 90%);
+  color: hsl(276, 55%, 52%);
+  max-width: 16rem;
+  width: 100%;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 1.5em;
+  box-shadow: 0px 0px 2px 0px hsl(271, 31%, 80%);
+  font-size: 1rem;
+}
+.white-color {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(271, 15%, 43%);
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 0.5em;
+  max-width: 16rem;
+  box-shadow: 0px 0px 2px 0px hsl(0, 0%, 90%);
+  font-size: 1rem;
+}
+.white-color:nth-child(3) {
+  max-width: fit-content;
+}
+
+.margin {
+  margin-bottom: 1em;
+  padding: 1em 0.5em 1em 1em;
+}
+
+.margin.no-margin {
+  margin-bottom: 0em;
+}
+.imgg {
+  margin-bottom: 1em;
+}
+
+.input-flex {
+  display: flex;
+  justify-content: center;
+  /* padding: 1 2em; */
+}
+.input {
+  /* flex-basis: 30rem; */
+  flex-grow: 1;
+  padding: 1em;
+  border-radius: 2em;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  /* border: 1px solid gray; */
+  box-shadow: 0px 0px 3px hsl(0, 0%, 90%);
+  font-size: 1.4rem;
+  outline: none;
+  color: hsl(271, 15%, 43%);
+}
+
+.input::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main-chat-box-comp .no-padding {
+  padding-bottom: 0px;
+}
+
+.circle-flex {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.circle {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: inherit;
+  border-radius: 50%;
+  border: 2px solid hsl(289, 100%, 72%);
+}
+
+.text-box {
+  text-align: center;
+  z-index: 12;
+}
+
+.heading {
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 0.5em;
+  font-size: 3.5rem;
+}
+.description {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.7;
+  margin-bottom: 0.5em;
+  max-width: 40rem;
+  padding: 1em;
+  font-size: 1.6rem;
+}
+@media only screen and (min-width: 800px) {
+  .main-container {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+
+  .heading {
+    text-align: left;
+    padding: 0em 0.5em;
+  }
+  .description {
+    text-align: left;
+    max-width: 47rem;
+    width: 100%;
+  }
+
+  .main-container::after {
+    width: 30%;
+    border-radius: 0% 100% 100% 0% / 100% 0% 100% 0%;
+    height: 80vh;
+  }
+
+  .main-container {
+    height: 100vh;
+    /* padding: 0; */
+  }
+
+  .main-container::before {
+    width: 35%;
+    height: 80vh;
+    border-radius: 98% 2% 0% 100% / 100% 0% 100% 0%;
+  }
+}
+
+span.dot {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  margin-top: 2px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: block;
+  background-color: hsl(276, 55%, 92%);
+}
+
+input.input {
+  background-image: url(images/download.png);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: right 1em top 50%;
 }
