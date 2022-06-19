@@ -344,3 +344,9 @@ input.input {
   background-repeat: no-repeat;
   background-position: right 1em top 50%;
 }
+
+@media (max-device-height: 600px) {
+  .main-container {
+    height: auto;
+  }
+}
